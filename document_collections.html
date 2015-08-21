@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Document Collections Tutorial</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+        <section>
+        <h3>Document Collections</h3>
+        <p>Document Collections let you apply transformations and stemmers easily to all the documents that
+            are going to be assessed. In this example, we will use the <span class="stand-out">DocumentArrayCollection</span>. 
+            The DocumentArrayCollection class lets you do zero based indexing or associative key based indexing
+        </p>
+        <h4>How to Create a Document Collection</h4>
+        <p>The example below shows how to create a document collection and normalize it by setting all the tokens to lower case and removing the English stop words, 
+            and applying the Lancaster stemmer. 
+        </p>
+        <div>
+            <code>
+                <pre>
+            $books = [
+                'poisonbelt' => 'https://ia801408.us.archive.org/10/items/poisonbelt00doylrich/poisonbelt00doylrich_djvu.txt',
+                'kingsolomon'=> 'https://ia801406.us.archive.org/6/items/kingsolomonsmi00hagguoft/kingsolomonsmi00hagguoft_djvu.txt'
+            ];
+            // Generic Tokenizer
+            $tokenizer = new GeneralTokenizer();
+            $bookCollection = [];
+            foreach($books as $title => $url) 
+            {
+                // create the raw token document
+                $document = new TokensDocument($tokenizer->tokenize(file_get_contents($book))); 
+                // key based indexing
+                $bookCollection[$title] = $document;
+                // zero based indexing 
+                //$bookCollection[] = $document;
+
+            }
+            $documentCollection = new DocumentArrayCollection($bookCollection);
+            // apply transformers/filters
+            $documentCollection->applyTransformations([new LowerCaseFilter(), new EnglishStopWordsFilter()]);
+            // apply stemmer
+            $documentCollection->applyStemmers([new SnowballStemmer()]);
+
+                </pre>
+            </code>
+        </div>
+        <div>
+            <h4><a href="documents_tokenized.html">Prev : Tokenized Documents</a></h4>
+            <h4><a href="basic_analysis.html">Next : Basic Analysis</a></h4>
+        </div>          
+        </section>
+
+    </div>
+    </body>
+</html>

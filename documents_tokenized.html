@@ -1,16 +1,50 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Tokenized Documents Tutorial</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+        <section>
+        <h3>Tokenized Documents</h3>
+        <p>There are two types of documents available token documents and word documents. <span class="stand-out">TokensDocument</span>
+            is a class that holds an array of tokens. The class allows you to apply transformations such as filters and stemmers to the tokens that make up the document. Upon
+            creation of the document you can pass in a zones variable that may contain additional metadata about the document, such as creation data, isbn etc..
+        </p>
+        <h4>TokensDocument</h4>
+        <p>The example below shows how to tokenize a document and normalize it by setting all the tokens to be lower case. 
+        </p>
+        <div>
+            <code>
+                <pre>
+            // Generic Tokenizer
+            $tokenizer = new GeneralTokenizer();
+            // create the raw token document
+            $document = new TokensDocument($tokenizer->tokenize("This has some words"));  
+            // apply the transformation to the document
+            $document->applyTransformation(new LowerCaseFilter())
+            // all the tokens should be lower cased
+            var_dump($document->getTokens()[0]);
+                </pre>
+            </code>
+        </div>
+        <div>
+            <h4><a href="documents_tokenized.html">Prev : Tokenized Documents Tutorial</a></h4>
+            <h4><a href="document_collections.html">Next : Document Collections</a></h4>
+        </div>          
+        </section>
+
+    </div>
     </body>
 </html>
