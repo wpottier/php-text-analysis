@@ -12,7 +12,7 @@ The Text Analysis library provides many features and tools for:
  * Stemmers
  * NGram generators
  * Text Comparison
- * Keyword Frequency Distributions
+ * [Keyword Frequency Distributions](freq_dist.md)
  * Phonetic algorithms
  * Document indexing
  * Document searching
