@@ -1,3 +1,7 @@
+---
+layout: post
+title: Text Analysis with PHP
+---
 
 # NGram Generator with PHP Text Analysis
 The NGramGenerator produces a set of re-occurring tokens. By default, the **NGramFactory::create**

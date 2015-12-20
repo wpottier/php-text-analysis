@@ -1,4 +1,6 @@
 ---
+layout: post
+title: Text Analysis with PHP
 ---
 
 

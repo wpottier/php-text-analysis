@@ -1,5 +1,7 @@
+---
 layout: default
 title: Text Analysis with PHP
+---
 
 # Welcome to Text Analysis with PHP
 
