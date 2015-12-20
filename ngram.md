@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Text Analysis with PHP
+title: NGram Generator with PHP
 ---
 
 # NGram Generator with PHP Text Analysis
