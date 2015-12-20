@@ -7,8 +7,17 @@
 ### FreqDist(array $tokens)
 
 Extracts the frequency distribution of keywords from the set of provided tokens. The **FreqDist** 
-provides several methods for obtaining information about the supplied tokens. 
+provides several methods for obtaining information about the supplied tokens and post computations. 
 The full API is available here (https://github.com/yooper/php-text-analysis/blob/master/src/Analysis/FreqDist.php)
+
+ * getWeightPerToken
+ * getTotalUniqueTokens
+ * getHapaxes
+ * getKeys
+ * getValues
+ * getKeyValuesByFrequency
+ * getKeyValuesByWeight
+
 
 ```
 $freqDist = new FreqDist(array("time", "flies", "like", "an", "arrow", "time", "flies", "like", "what"));

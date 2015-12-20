@@ -14,7 +14,7 @@ Allows you to specify a string start position and length of string per line that
 you only want to grab the a fixed string per line.
 
 
-```
+```php
 $tokenizer = new FixedLengthTokenizer(2,4);
 $tokens = $tokenizer->tokenize("Gabby Abby");
 $this->assertCount(1, $tokens);
@@ -31,7 +31,7 @@ Wraps PHP's native function **strtok** to provide a general purpose tokenizer th
 well in most situations. The tokens are split using delimiters passed in via the constructor. 
 The default set works well. 
 
-```
+```php
 $tokenizer = new GeneralTokenizer();
 $tokens = $tokenizer->tokenize("This has some words");
 ```
@@ -41,7 +41,7 @@ This tokenizer implements the PennTreeBank algorithm using PHP. The implementati
 off of (http://www.cis.upenn.edu/~treebank/tokenizer.sed) Inside the constructor the rules
 are initialized
 
-```
+```php
 $tokenizer = new PennTreeBankTokenizer();
 $tokens = $tokenizer->tokenize("Good muffins cost $3.88\nin New York.  Please buy me\ntwo of them.\nThanks.");
 $this->assertCount(16, $tokens);
@@ -51,7 +51,7 @@ $this->assertCount(16, $tokens);
 Wraps PHP's *preg_match_all* function. Uses a default regex of **/\w+|\$[\d\.]+|\S+/**.
 
 
-```
+```php
 //uses default regex
 $tokenizer = new RegexTokenizer();
 $tokens = $tokenizer->tokenize("Good muffins cost $3.88\nin New York.  Please buy me\ntwo of them.\nThanks.");
@@ -66,7 +66,7 @@ $this->assertCount(13, $tokens);
 ### SentenceTokenizer($tokenExpression = " \n\t\r,-!?"))
 Extends the GeneralTokenizer. A token is the whole sentence. 
 
-```
+```php
 $tokenizer = new SentenceTokenizer();
 $this->assertCount(2, $tokenizer->tokenize("This has some words. Why only 4 words?"));
 $this->assertCount(2, $tokenizer->tokenize("My name is Yooper. I like programming!"));        
