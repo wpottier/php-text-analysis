@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Text Analysis with PHP
+title: Tokenizers
 ---
 
 # Tokenizers and PHP Text Analysis

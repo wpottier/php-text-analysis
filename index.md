@@ -5,13 +5,13 @@ title: Text Analysis with PHP
 
 # Welcome to Text Analysis with PHP
 
-PHP Text Analysis is a library for performing Information Retrival (IR) and Natural Language Processing (NLP) tasks using the PHP language. 
+PHP Text Analysis is a library for performing Information Retrieval (IR) and Natural Language Processing (NLP) tasks using the PHP language. 
 The Text Analysis library provides many features and tools for:
 
  * [Tokenizers](tokenizers)
  * Extracting emails, urls, and dates
  * Normalizing filters for text analysis
- * Stemmers
+ * [Stemmers](stemmers)
  * [NGram Generator](ngram)
  * Text Comparison
  * [Keyword Frequency Distributions](freq_dist)
