@@ -19,6 +19,8 @@ The Text Analysis library provides many features and tools for:
  * Document indexing
  * Document searching
  * Document collections
+ * [textconsole](textconsole)
+ * [Import Corpus](import_corpus)
 
 
 If you have any questions or features requests, please post to the github issue tracker. 

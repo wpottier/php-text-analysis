@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Keyword Frequency Distribution : Text Analysis with PHP
+title: Keyword Frequency Distribution Text Analysis with PHP
 ---
 
 
