@@ -19,6 +19,7 @@ The Text Analysis library provides many features and tools for:
  * [Phonetic algorithms](phonetic_algorithms)
  * [Rapid Automatic Keyword Extraction (RAKE)](rake)
  * [Stemmers](stemmers)
+ * [Stanford's NER Tagger] (stanford_ner_tagger)
  * Text Comparison
  * [textconsole](textconsole)
  * [Tokenizers](tokenizers)
