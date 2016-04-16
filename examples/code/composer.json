@@ -1,0 +1,15 @@
+{
+    "name": "yooper/php-text-analysis-examples",
+    "description": "Code examples using the PHP text analysis library",
+    "license": "Apache2",
+    "authors": [
+        {
+            "name": "yooper",
+            "email": "dcardin2007@gmail.com"
+        }
+    ],
+    "require": {
+	    "yooper/php-text-analysis": "dev-master",
+	    "yooper/stop-words": "dev-master"
+    }
+}
