@@ -9,7 +9,7 @@ PHP Text Analysis is a library for performing Information Retrieval (IR) and Nat
 The Text Analysis library provides many features and tools for:
 
 
- * [Code Samples](/examples/examples) 
+ * [Code Samples](examples/examples) 
  * Document indexing
  * Document searching
  * Document collections

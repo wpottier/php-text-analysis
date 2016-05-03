@@ -1,12 +1,12 @@
 name: Yooper's PHP Text Analysis
-description:  PHP Text Analysis is a library for performing Information Retrival (IR) and Natural Language Processing (NLP) tasks using the PHP language.
+description:  PHP Text Analysis is a library for performing Information Retrieval (IR) and Natural Language Processing (NLP) tasks using the PHP language.
 
 sass:
   sass_dir: assets/css/_sass
   style: :compressed
 
-markdown: redcarpet
-redcarpet:
+markdown: kramdown
+kramdown:
   extensions: ["no_intra_emphasis", "tables", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
 
 url: http://yooper.github.io/php-text-analysis/
