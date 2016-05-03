@@ -20,4 +20,4 @@ Then start the PHP web server while in the code directory.
 
 The following examples are available
 
- * [Word Cloud](/examples/word_cloud) | [Word Cloud Example Code](/examples/code/word_cloud/index.php)
+ * [Word Cloud](/examples/word_cloud/) | [Word Cloud Example Code](/examples/code/word_cloud/index.php)
